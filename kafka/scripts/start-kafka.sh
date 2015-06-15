@@ -22,6 +22,7 @@ if [ ! -z "$ADVERTISED_PORT" ]; then
     echo "advertised port: $ADVERTISED_PORT"
     sed -r -i "s/#(advertised.port)=(.*)/\1=$ADVERTISED_PORT/g" $KAFKA_HOME/config/server.properties
 fi
+# Set kafka num partitions 
 if [ ! -z "$KAFKA_NUM_PARTITIONS" ]; then
     echo "num partitions: $KAFKA_NUM_PARTITIONS"
     sed -r -i "s/#(num.partitions)=(.*)/\1=$KAFKA_NUM_PARTITIONS/g" $KAFKA_HOME/config/server.properties
