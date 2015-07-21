@@ -16,7 +16,6 @@ RUN \
     add-apt-repository -y ppa:webupd8team/java && \
     apt-get update && \
     apt-get install -y oracle-java7-installer
-    rm -rf /var/lib/apt/lists/* && \
     wget -q http://apache.mirrors.spacedump.net/kafka/0.8.1.1/kafka_2.8.0-0.8.1.1.tgz -O /tmp/kafka_2.8.0-0.8.1.1.tgz && \
     tar xfz /tmp/kafka_2.8.0-0.8.1.1.tgz -C /opt && \
     rm /tmp/kafka_2.8.0-0.8.1.1.tgz
